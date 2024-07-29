@@ -8,7 +8,7 @@
   "description": "Default template for package metadata properties",
   "precedence": "0",
   "identity": "Nemonuri.PackageMetadatas.Templates.DefaultTemplate",
-  "shortName": "packprops",
+  "shortName": "pkgprop",
   "tags": {
     "language": "XML",
     "type": "item"
