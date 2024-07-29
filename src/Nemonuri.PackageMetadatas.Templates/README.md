@@ -1,1 +1,0 @@
-Nuget package metadata templates
