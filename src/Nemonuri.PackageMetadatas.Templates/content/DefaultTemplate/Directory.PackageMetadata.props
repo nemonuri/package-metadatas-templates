@@ -16,17 +16,13 @@
   - Semantic Versioning 2.0.0: https://semver.org/
   -->
 
-  <ItemGroup Label="Package Metadata">
-    
-    <!-- Including icon file info package. -->
-    <None Include="icon_128x128.png" Pack="true" PackagePath=""/>
-
-    <!-- Including readme file info package. -->
-    <None Include="README.md" Pack="true" PackagePath="" />
-    
-  </ItemGroup>
-
   <PropertyGroup Label="Package Metadata">
+
+    <!--
+    - The package name or identifier.
+    - Default: $(AssemblyName)
+    -->
+    <PackageId>$(AssemblyName)</PackageId>
 
     <!--
     - NuGet package version.
@@ -35,12 +31,6 @@
     - Default: $(Version)
     -->
     <PackageVersion>$(Version)</PackageVersion>
-
-    <!--
-    - The package name or identifier.
-    - Default: $(AssemblyName)
-    -->
-    <PackageId>$(AssemblyName)</PackageId>
 
     <!--
     - A semicolon-separated list of packages authors, matching the profile names on nuget.org.
@@ -130,5 +120,15 @@
     <PackageLicenseExpression></PackageLicenseExpression>
 
   </PropertyGroup>
+
+  <ItemGroup Label="Package Metadata">
+    
+    <!-- Including icon file info package. -->
+    <None Include="icon_128x128.png" Pack="true" PackagePath=""/>
+
+    <!-- Including readme file info package. -->
+    <None Include="README.md" Pack="true" PackagePath="" />
+    
+  </ItemGroup>
 
 </Project>
