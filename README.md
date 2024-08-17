@@ -28,11 +28,11 @@ dotnet new pkgprop
 
 ![readme_image1](docs/images/readme_image1.png)
 
-#### *.Pack.props
+- #### *.Pack.props
 
 ![readme_image2](docs/images/readme_image2.png)
 
-#### `READMD.md` and `icon_128x128.png` (*.Pack.Resources)
+- #### `READMD.md` and `icon_128x128.png` (*.Pack.Resources)
 
 ![readme_image3](docs/images/readme_image3.png)
 
