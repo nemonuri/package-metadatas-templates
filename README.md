@@ -8,7 +8,7 @@
 
 ### Prerequisites
 
-- .NET SDK 7.0.100 or higher
+- .NET SDK 8.0 or higher
 
 ### Install this template
 
