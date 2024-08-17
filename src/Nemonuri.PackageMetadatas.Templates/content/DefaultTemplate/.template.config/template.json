@@ -26,5 +26,18 @@
       "path": "Directory-1.Pack.Resources"
     }
   ],
-  "defaultName": "Directory"
+  "defaultName": "Directory",
+
+  "postActions": [
+    {
+      "description": "Manual actions required",
+      "manualInstructions": [
+          {
+              "text": "Add <Import Project=\"*.Pack.props\"> to your *.*proj. Modify '*.Pack.props' and files in '*.Pack.Resources'"
+          }
+      ],
+      "actionId": "AC1156F7-BB77-4DB8-B28F-24EEBCCA1E5C",
+      "continueOnError": true
+    }
+  ]
 }

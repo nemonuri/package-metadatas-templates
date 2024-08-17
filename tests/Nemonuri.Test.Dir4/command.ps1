@@ -1,7 +1,9 @@
 Set-Location -Path $PSScriptRoot
 
-dotnet new classlib
-dotnet new pkgprop
+# TODO: clean temporary files
+
+dotnet new classlib --force
+dotnet new pkgprop --force
 
 $xElem = [System.Xml.Linq.XElement]::new([System.Xml.Linq.XName]"Import")
 $xElem.SetAttributeValue([System.Xml.Linq.XName]"Project", "Directory.Pack.props")
