@@ -128,10 +128,10 @@
   <ItemGroup Label="Package Metadata">
     
     <!-- Including icon file info package. -->
-    <None Include="icon_128x128.png" Pack="true" PackagePath=""/>
+    <None Include="Directory-1.Pack.Resources\icon_128x128.png" Pack="true" PackagePath=""/>
 
     <!-- Including readme file info package. -->
-    <None Include="README.md" Pack="true" PackagePath="" />
+    <None Include="Directory-1.Pack.Resources\README.md" Pack="true" PackagePath="" />
     
   </ItemGroup>
 

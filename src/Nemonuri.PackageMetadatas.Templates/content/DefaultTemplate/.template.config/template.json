@@ -4,14 +4,27 @@
   "classifications": [
     "Authoring", "Package"
   ],
-  "name": "Package metadata .props file",
-  "description": "Default template for package metadata properties",
+  "name": "Package metadata",
+  "generatorVersions": "[1.0.0.0-*)",
+  "description": "Default template for NuGet package metadata. MSBuild property format. (.props)",
   "precedence": "0",
   "identity": "Nemonuri.PackageMetadatas.Templates.DefaultTemplate",
   "shortName": "pkgprop",
-  "preferNameDirectory": false,
   "tags": {
     "language": "XML",
     "type": "item"
-  }
+  },
+
+  "sourceName": "Directory-1",
+  "preferDefaultName": true,
+  "preferNameDirectory": false,
+  "primaryOutputs": [
+    {
+      "path": "Directory-1.Pack.props"
+    },
+    {
+      "path": "Directory-1.Pack.Resources"
+    }
+  ],
+  "defaultName": "Directory"
 }
