@@ -33,7 +33,7 @@
       "description": "Manual actions required",
       "manualInstructions": [
           {
-              "text": "Add <Import Project=\"*.Pack.props\"> to your *.*proj. Modify '*.Pack.props' and files in '*.Pack.Resources'"
+              "text": "\n 1. Add under XML element to your project file. (*.*proj) \n\t <Import Project=\"*.Pack.props\"> \n 2. Modify '*.Pack.props' and files in '*.Pack.Resources'"
           }
       ],
       "actionId": "AC1156F7-BB77-4DB8-B28F-24EEBCCA1E5C",
