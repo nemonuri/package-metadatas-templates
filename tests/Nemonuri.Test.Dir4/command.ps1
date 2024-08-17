@@ -1,7 +1,5 @@
 Set-Location -Path $PSScriptRoot
 
-Remove-Item -Path */** -Exclude *.ps1
-
 dotnet new classlib
 dotnet new pkgprop
 
