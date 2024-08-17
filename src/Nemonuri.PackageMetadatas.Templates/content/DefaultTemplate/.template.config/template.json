@@ -9,6 +9,7 @@
   "precedence": "0",
   "identity": "Nemonuri.PackageMetadatas.Templates.DefaultTemplate",
   "shortName": "pkgprop",
+  "preferNameDirectory": false,
   "tags": {
     "language": "XML",
     "type": "item"
