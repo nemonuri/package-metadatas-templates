@@ -26,19 +26,19 @@ dotnet new pkgprop
 
 ### 2. Modify created files
 
-![readme_image1](docs/images/readme_image1.png)
+![readme_image1](https://raw.githubusercontent.com/nemonuri/package-metadatas-templates/main/docs/images/readme_image1.png)
 
 - #### *.Pack.props
 
-![readme_image2](docs/images/readme_image2.png)
+![readme_image2](https://raw.githubusercontent.com/nemonuri/package-metadatas-templates/main/docs/images/readme_image2.png)
 
 - #### `READMD.md` and `icon_128x128.png` (*.Pack.Resources)
 
-![readme_image3](docs/images/readme_image3.png)
+![readme_image3](https://raw.githubusercontent.com/nemonuri/package-metadatas-templates/main/docs/images/readme_image3.png)
 
 ### 3. Import `*.Pack.props` to your project
 
-![readme_image4](docs/images/readme_image4.png)
+![readme_image4](https://raw.githubusercontent.com/nemonuri/package-metadatas-templates/main/docs/images/readme_image4.png)
 
 ### 4. Done!
 
