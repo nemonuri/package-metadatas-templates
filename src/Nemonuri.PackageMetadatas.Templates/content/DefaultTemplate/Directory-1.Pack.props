@@ -26,7 +26,7 @@
     - The package name or identifier.
     - Default: $(AssemblyName)
     -->
-    <PackageId>$(AssemblyName)</PackageId>
+    <PackageId Condition="'$(PackageId)' == ''">$(AssemblyName)</PackageId>
 
     <!--
     - NuGet package version.
@@ -34,7 +34,7 @@
       - If you don't know about semver, read 'Semantic Versioning 2.0.0'.
     - Default: $(Version)
     -->
-    <PackageVersion>$(Version)</PackageVersion>
+    <PackageVersion Condition="'$(PackageVersion)' == ''">$(Version)</PackageVersion>
 
     <!--
     - A semicolon-separated list of packages authors, matching the profile names on nuget.org.
@@ -44,63 +44,63 @@
       - Contoso Corporation (O)
     - TO-DO: Fill your or your organization's names as package authors.
     -->
-    <Authors>TODO</Authors>
+    <Authors Condition="'$(Authors)' == ''">TODO</Authors>
 
     <!--
     - A human-friendly title of the package, typically used in UI displays as on nuget.org and the Package Manager in Visual Studio.
     - Default: $(PackageId)
     -->
-    <Title>$(PackageId)</Title>
+    <Title Condition="'$(Title)' == ''">$(PackageId)</Title>
     
     <!--
     - A description of the package.
     - Recommend: Write a short description (up to 4000 characters) to describe your package.
     - TO-DO: Fill package description.
     -->
-    <Description>TODO</Description>
+    <Description Condition="'$(Description)' == ''">TODO</Description>
 
     <!--
     - Copyright details for the package.
     - Recommend: Add a copyright notice to your package with "Copyright (c) <name/company> <year>".
     -->
-    <Copyright>Copyright (c) $(Authors) $([System.DateTime]::Now.Year)</Copyright>
+    <Copyright Condition="'$(Copyright)' == ''">Copyright (c) $(Authors) $([System.DateTime]::Now.Year)</Copyright>
 
     <!--
     - Repository URL used to clone or retrieve source code.
     - Example: https://github.com/NuGet/NuGet.Client.git
     -->
-    <RepositoryUrl></RepositoryUrl>
+    <RepositoryUrl Condition="'$(RepositoryUrl)' == ''"></RepositoryUrl>
 
     <!--
     - Repository type.
     - Default: git
     -->
-    <RepositoryType>git</RepositoryType>
+    <RepositoryType Condition="'$(RepositoryType)' == ''">git</RepositoryType>
 
     <!--
     - A URL for the project homepage.
     - Recommend: Include a link to an associated project, repository, or company website.
     -->
-    <PackageProjectUrl>$(RepositoryUrl)</PackageProjectUrl>
+    <PackageProjectUrl Condition="'$(PackageProjectUrl)' == ''">$(RepositoryUrl)</PackageProjectUrl>
 
     <!--
     - In-Package path to the package icon image file.
     - Recommend: Use an image that is 128x128 and has a transparent background (PNG) for best viewing results.
     -->
-    <PackageIcon>icon_128x128.png</PackageIcon>
+    <PackageIcon Condition="'$(PackageIcon)' == ''">icon_128x128.png</PackageIcon>
 
     <!--
     - In-Package path to the package README markdown file.
     - Recommend: Add a README markdown file that provides an overview of what your package does and how to get started.
     -->
-    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReadmeFile Condition="'$(PackageReadmeFile)' == ''">README.md</PackageReadmeFile>
 
     <!--
     - A space-delimited list of tags and keywords that describe the package.
     - Tags are used when searching for packages.
     - Recommend: Include several tags with key terms related to your package to enhance discoverability.
     -->
-    <PackageTags></PackageTags>
+    <PackageTags Condition="'$(PackageTags)' == ''"></PackageTags>
 
     <!--
     - A description of the changes made in this release of the package.
@@ -111,7 +111,7 @@
     - Recommend 2: Include a link to the release note file.
     - Recommend 3: Include a link to the release note URL.
     -->
-    <PackageReleaseNotes></PackageReleaseNotes>
+    <PackageReleaseNotes Condition="'$(PackageReleaseNotes)' == ''"></PackageReleaseNotes>
 
     <!--
     - An SPDX license expression.
@@ -121,17 +121,17 @@
     - If you want to use your own license, use <PackageLicenseFile> property instead.
       - Packing a license expression or a license file: https://learn.microsoft.com/en-us/nuget/reference/msbuild-targets#packing-a-license-expression-or-a-license-file
     -->
-    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageLicenseExpression Condition="'$(PackageLicenseExpression)' == ''"></PackageLicenseExpression>
 
   </PropertyGroup>
 
   <ItemGroup Label="Package Metadata">
     
     <!-- Including icon file info package. -->
-    <None Include="Directory-1.Pack.Resources\icon_128x128.png" Pack="true" PackagePath=""/>
+    <None Include="$(MSBuildThisFileDirectory)Directory-1.Pack.Resources\icon_128x128.png" Pack="true" PackagePath=""/>
 
     <!-- Including readme file info package. -->
-    <None Include="Directory-1.Pack.Resources\README.md" Pack="true" PackagePath="" />
+    <None Include="$(MSBuildThisFileDirectory)Directory-1.Pack.Resources\README.md" Pack="true" PackagePath="" />
     
   </ItemGroup>
 
