@@ -15,7 +15,7 @@
     <PackageIcon>nemonuri_icon_128x128.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>NuGet Package Template Authoring</PackageTags>
-    <PackageReleaseNotes>First release</PackageReleaseNotes>
+    <PackageReleaseNotes>Add property condition</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
 
     <!-- Keep package type as 'Template' to show the package as a template package on nuget.org and make your template available in dotnet new search.-->
